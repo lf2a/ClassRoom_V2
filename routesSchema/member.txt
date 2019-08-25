@@ -1,0 +1,21 @@
+@POST "/member" ; add usuario a uma sala
+  BODY: {
+    email ; alvo
+  }
+
+  HEADERS: {
+    x-access-token,
+    id_user, ; logado
+    id_room
+  }
+
+@DELETE "/member" ; ecluir usuario de uma sala
+  BODY: {
+    email ; alvo
+  }
+
+  HEADERS: {
+    x-access-token,
+    id_user, ; logado
+    id_room
+  }

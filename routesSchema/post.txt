@@ -1,0 +1,38 @@
+@POST "/post" ; criar post
+  BODY: {
+    title,
+    subject,
+    content
+  },
+  HEADERS: {
+    id_room,
+    id_user
+  }
+
+@PUT "/post" ; atualizar post
+  BODY: {
+    title,
+    subject,
+    content
+  },
+
+  HEADERS: {
+    id_post,
+    id_user
+  }
+
+@DELETE "/post" ; excluir post
+  HEADERS: {
+    id_post,
+    id_user
+  }
+
+@GET "/posts" ; ver todos os posts da sala
+  HEADERS: {
+    id_room
+  }
+
+@GET "/post" ; ver post
+  HEADERS: {
+    id_post
+  }

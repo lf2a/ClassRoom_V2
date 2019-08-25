@@ -1,0 +1,24 @@
+@POST   "/user"   ; criar usuario
+  BODY: {
+    name,
+    email,
+    password
+  }
+
+@DELETE "/user"   ; excluir usuario
+  HEADERS: {
+    id_user,
+    password,
+    x-access-token
+  }
+
+@PUT    "/user"   ; autalizar infomações
+  BODY: {
+    name,
+    email
+  },
+  HEADERS: {
+    id_user,
+    password,
+    x-access-token
+  }

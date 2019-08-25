@@ -1,0 +1,32 @@
+@POST "/room" ; criar sala
+  BODY: {
+    name,
+    description
+  },
+  HEADERS: {
+    id_user,
+    x-access-token
+  }
+
+@DELETE "/room" ; excluir sala
+  HEADERS: {
+    id_room,
+    id_user
+  }
+
+@PUT "/room" ; atualizar info da sala
+  BODY: {
+    name,
+    description
+  },
+  HEADERS: {
+    id_user,
+    id_room,
+    x-access-token
+  }
+
+@GET "/room" ; mostrar todas as salas do usuario
+  HEADERS: {
+    id_user,
+    x-access-token
+  }
